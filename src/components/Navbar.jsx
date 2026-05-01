@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import NavLink from './NavLink';
 
 const Navbar = () => {
     return (
@@ -13,18 +14,20 @@ const Navbar = () => {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <Link href={"/"}>Home</Link>
-        <Link href={"/allbooks"}>All Books</Link>
-        <Link href={"/profile"}>My Profile</Link>
+         <li><NavLink href={"/"}>Home</NavLink></li>
+        <li><NavLink href={"/allbooks"}>All Books</NavLink></li>
+        <li><NavLink href={"/profile"}>My Profile</NavLink></li>
       </ul>
     </div>
-    <Link href={"/"} className="btn btn-ghost text-xl">MoonLit Library</Link>
+   <Link href={"/"} className="btn btn-ghost normal-case text-2xl font-black"><span
+    className="bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
+        MoonLit Library</span></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 flex items-center gap-2">
-      <Link href={"/"}>Home</Link>
-        <Link href={"/allbooks"}>All Books</Link>
-        <Link href={"/profile"}>My Profile</Link>
+      <li><NavLink href={"/"}>Home</NavLink></li>
+        <li><NavLink href={"/allbooks"}>All Books</NavLink></li>
+        <li><NavLink href={"/profile"}>My Profile</NavLink></li>
     </ul>
   </div>
   <div className="navbar-end">
