@@ -6,7 +6,7 @@
     "description": "A classic novel set in the Roaring Twenties that explores themes of wealth, love, and the American Dream.",
     "category": "Story",
     "available_quantity": 12,
-    "image_url": "../src/assets/1.jpg"
+    "image_url": "https://i.ibb.co.com/BVcLpqyd/1.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "A handbook of agile software craftsmanship, providing tips for writing clearer, more maintainable code.",
     "category": "Tech",
     "available_quantity": 8,
-    "image_url": "../src/assets/2.jpg"
+    "image_url":"https://i.ibb.co.com/Kp9GTQTD/2.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "An exploration of cosmology, covering black holes, the Big Bang, and the nature of the universe.",
     "category": "Science",
     "available_quantity": 15,
-    "image_url": "../src/assets/3.jpg"
+    "image_url":"https://i.ibb.co.com/hF7Wk065/3.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "The story of Holden Caulfield's journey through New York City as he deals with teenage angst and alienation.",
     "category": "Story",
     "available_quantity": 5,
-    "image_url": "../src/assets/4.jpg"
+    "image_url":"https://i.ibb.co.com/sdtYr0Cz/4.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "description": "Foundational advice for software developers on career development and technical mastery.",
     "category": "Tech",
     "available_quantity": 10,
-    "image_url": "../src/assets/5.jpg"
+    "image_url":"https://i.ibb.co.com/VpYPgsZ7/5.jpg"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "description": "A sweeping narrative of the evolution of the universe and the human pursuit of knowledge.",
     "category": "Science",
     "available_quantity": 20,
-    "image_url": "../src/assets/6.jpg"
+    "image_url":"https://i.ibb.co.com/jkMpR7ck/6.jpg"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "description": "The fantasy adventure of Bilbo Baggins as he travels to reclaim a treasure guarded by a dragon.",
     "category": "Story",
     "available_quantity": 18,
-    "image_url": "../src/assets/7.jpg"
+    "image_url":"https://i.ibb.co.com/hFVNTLYG/7.jpg"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "description": "A comprehensive guide to the design and analysis of computer algorithms.",
     "category": "Tech",
     "available_quantity": 4,
-    "image_url": "../src/assets/8.jpg"
+    "image_url":"https://i.ibb.co.com/YBG0hLxS/8.jpg"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "A landmark work in evolutionary biology that centers on the gene-centered view of evolution.",
     "category": "Science",
     "available_quantity": 9,
-    "image_url": "../src/assets/9.jpg"
+    "image_url":"https://i.ibb.co.com/0pF9Ldxm/9.jpg"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "description": "A dystopian novel depicting a totalitarian society ruled by Big Brother.",
     "category": "Story",
     "available_quantity": 25,
-    "image_url": "../src/assets/10.jpg"
+    "image_url":"https://i.ibb.co.com/bMsPkrMB/10.png"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "description": "The official guide to the Rust language, focusing on safety and performance.",
     "category": "Tech",
     "available_quantity": 7,
-    "image_url": "../src/assets/11.jpg"
+    "image_url":"https://i.ibb.co.com/6RCBWkts/11.jpg" 
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "description": "An investigation into the history of humans from the Stone Age to the present day.",
     "category": "Science",
     "available_quantity": 14,
-    "image_url": "../src/assets/12.jpg"
+    "image_url":"https://i.ibb.co.com/YFWStLr3/12.jpg" 
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "description": "A futuristic social critique exploring a world of genetic engineering and social conditioning.",
     "category": "Story",
     "available_quantity": 11,
-    "image_url": "../src/assets/13.jpg"
+    "image_url": "https://i.ibb.co.com/G4n3zFqW/13.jpg"
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "description": "A deep dive into improving the design of existing code without changing its behavior.",
     "category": "Tech",
     "available_quantity": 6,
-    "image_url": "../src/assets/14.jpg"
+    "image_url": "https://i.ibb.co.com/bjHb5DWR/14.jpg" 
   },
   {
     "id": 15,
@@ -132,6 +132,6 @@
     "description": "A biography of the gene, tracing its discovery and the implications for our future.",
     "category": "Science",
     "available_quantity": 13,
-    "image_url": "../src/assets/15.jpg"
+    "image_url": "https://i.ibb.co.com/RpXG6b26/15.jpg"
   }
 ]
