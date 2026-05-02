@@ -18,9 +18,16 @@ export default function LogInPage() {
         })
         console.log({data,error});
     }
+    const handleGoogleSignIn = async () => {{
+        await authClient.signIn.social({
+            provider: "google",
+        });
+    }
+}
 
     return (
-        <form onSubmit={handleLogIn} className='flex justify-center items-center mt-10 mb-20'>
+        <div className='flex flex-col items-center mb-20'>
+        <form onSubmit={handleLogIn}  className='flex justify-center items-center mt-10 mb-10'>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
                 <h2 className="font-bold text-2xl text-center">Sign In</h2>
 
@@ -32,5 +39,7 @@ export default function LogInPage() {
                 <Link href={"/"}><button type="submit" className="btn bg-blue-300 mt-4">Log In</button></Link>
             </fieldset>
         </form>
+        <button onClick={handleGoogleSignIn} className="btn">Sign in with Google</button>
+</div>
     );
 };

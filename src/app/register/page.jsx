@@ -2,6 +2,7 @@
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
+import { toast } from 'react-toastify';
 
 export default function RegisterPage() {
     const handleRegister = async (e) => {
@@ -19,16 +20,17 @@ export default function RegisterPage() {
             photo,
             password
         })
-        if (data) {
-            console.log("Success:", data);
-            router.push("/login"); 
-        }
-        
         if (error) {
             console.error("Error:", error);
+            toast.error(error);
         }
     }
-
+    const handleGoogleSignIn = async () => {{
+            await authClient.signIn.social({
+                provider: "google",
+            });
+        }
+    }
     return (
         <form onSubmit={handleRegister} className='flex justify-center items-center mt-10 mb-20'>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
@@ -38,7 +40,7 @@ export default function RegisterPage() {
                 <input type="text" name='name' className="input" placeholder="Name" required />
                 
                 <label className="label">Upload Photo</label>
-                <input type="file" name='photo' className="file-input" required />
+                <input type="url" name='photo' className="input"/>
 
                 <label className="label">Email</label>
                 <input type="email" name='email' className="input" placeholder="Email" required />
@@ -47,9 +49,10 @@ export default function RegisterPage() {
                 <input type="password" name='password' className="input" placeholder="Password" required />
 
               <div className="flex gap-2 mt-4">
-                    <button type="submit" className="btn bg-blue-300">Register</button>
+                   <Link href={"/login"}><button type="submit" className="btn bg-blue-300">Register</button></Link> 
                     <button type="reset" className="btn bg-gray-300">Reset</button>
                 </div>
+                 <button onClick={handleGoogleSignIn} className="btn">Sign up with Google</button>
                 <div className="divider text-xs">OR</div>
                 <p className="text-center">Already have an account?</p>
                 <button><Link href="/login" className="btn bg-blue-300 btn-sm mt-2">Log In</Link></button>
