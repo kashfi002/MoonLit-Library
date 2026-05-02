@@ -2,17 +2,19 @@ import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-// No 'await' here. Just define the client.
 const client = new MongoClient(process.env.MONGODB_URI);
+
+// Explicitly connect before using
+await client.connect();
+
 const db = client.db("MoonLitLibrary");
 
 export const auth = betterAuth({
-  database: mongodbAdapter(db, {
-    client, // The adapter connects the client for you
-  }),
+  database: mongodbAdapter(db),
   secret: process.env.BETTER_AUTH_SECRET,
-  emailAndPassword: { 
-    enabled: true, 
+  baseURL: process.env.BETTER_AUTH_URL,
+  emailAndPassword: {
+    enabled: true,
   },
   socialProviders: {
     google: {
