@@ -1,8 +1,19 @@
+'use client';
 import Link from 'next/link';
 import React from 'react';
 import NavLink from './NavLink';
+import { authClient } from '@/lib/auth-client';
 
 const Navbar = () => {
+  const userData=authClient.useSession();
+  const user=userData.data?.user;
+  console.log("User in Navbar:", user);
+ 
+
+  const handleSignOut = async () => {
+    await authClient.signOut();
+  };
+
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className='container mx-auto flex'>
@@ -31,7 +42,36 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link href="/register"><button>Register</button></Link>
+    {
+    !user && <ul className='flex gap-4'>
+ <Link href="/register"><button className='btn bg-blue-300'>Register</button></Link>
+     <Link href="/login"><button className='btn bg-gray-300'>Log In</button></Link>
+    </ul>
+    }
+    {
+      user && <ul className='flex gap-4'>
+       <div className="avatar mb-4">
+            <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+              {user.image ? (
+                <img 
+                  src={user.image} 
+                  alt={user.name} 
+                  onError={(e) => {
+                    // Fallback if URL is broken
+                    e.currentTarget.src = `https://ui-avatars.com/api/?name=${user.name}`;
+                  }}
+                />
+              ) : (
+                <div className="bg-neutral text-neutral-content flex items-center justify-center h-full text-3xl">
+                  {user.name?.charAt(0)}
+                </div>
+              )}
+            </div>
+          </div>
+        <button className='btn bg-red-500 text-white' onClick={handleSignOut}>Sign Out</button>
+      </ul>
+    }
+    
   </div>
 </div>
 </div>

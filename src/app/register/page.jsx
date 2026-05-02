@@ -3,8 +3,11 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
+
 
 export default function RegisterPage() {
+    const router = useRouter();
     const handleRegister = async (e) => {
         e.preventDefault();
 
@@ -17,13 +20,16 @@ export default function RegisterPage() {
         const {data,error}=await authClient.signUp.email({
             name,
             email,
-            photo,
+              image: photo,
             password
         })
+        if (data) {
+    router.push("/login");
+}
         if (error) {
-            console.error("Error:", error);
-            toast.error(error);
-        }
+    console.error("Error:", error);
+    toast.error(error?.message || "Registration failed"); // ✅ was just `error`
+}
     }
     const handleGoogleSignIn = async () => {{
             await authClient.signIn.social({
@@ -40,7 +46,7 @@ export default function RegisterPage() {
                 <input type="text" name='name' className="input" placeholder="Name" required />
                 
                 <label className="label">Upload Photo</label>
-                <input type="url" name='photo' className="input"/>
+               <input type="url" name='photo' className="input"/>
 
                 <label className="label">Email</label>
                 <input type="email" name='email' className="input" placeholder="Email" required />
@@ -49,7 +55,7 @@ export default function RegisterPage() {
                 <input type="password" name='password' className="input" placeholder="Password" required />
 
               <div className="flex gap-2 mt-4">
-                   <Link href={"/login"}><button type="submit" className="btn bg-blue-300">Register</button></Link> 
+                   <button type="submit" className="btn bg-blue-300">Register</button>
                     <button type="reset" className="btn bg-gray-300">Reset</button>
                 </div>
                  <button onClick={handleGoogleSignIn} className="btn">Sign up with Google</button>
