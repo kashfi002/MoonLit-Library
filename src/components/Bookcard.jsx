@@ -15,7 +15,7 @@ const Bookcard = ({book}) => {
                 </figure>
                 <div className="card-body flex flex-col flex-grow">
                     <h2 className="card-title">{book.title}</h2>
-                    <p className="flex-grow">{book.description}</p>
+                    <p className="flex-grow font-semibold">{book.description}</p>
                     <div className="card-actions justify-end mt-4">
                        <Link href={`/allbooks/${book.id}`}><button className="btn bg-blue-300">View Details</button></Link>
                     </div>

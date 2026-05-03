@@ -7,20 +7,46 @@ const BookDetails = ({ book }) => {
     };
 
     return (
-        <div className='container mx-auto my-20'>
-            <div className="card bg-base-100 shadow-sm h-full flex flex-col">
-                <figure className="px-4 pt-4">
-                    <img src={book.image_url} className="rounded-xl h-[200px] object-cover" />
-                </figure>
-                <div className="card-body flex flex-col flex-grow">
-                    <h2 className="card-title text-3xl font-bold">{book.title}</h2>
-                    <h2 className='text-2xl font-semibold'>By: {book.author}</h2>
-                    <div className="badge badge-soft badge-info">{book.category}</div>
-                    <div className="badge badge-soft badge-success">{book.available_quantity} books available</div>
-                    <p className="flex-grow">{book.description}</p>
-                    <button onClick={handleBorrow} className='btn bg-blue-400 rounded-md shadow'>
-                        Borrow This Book
-                    </button>
+        <div className='min-h-screen flex items-center justify-center bg-base-200 px-4 m-5 py-10'>
+            <div className="card max-w-3xl w-full bg-base-100 shadow-xl rounded-2xl overflow-hidden">
+
+              <figure className="h-[300px] overflow-hidden">
+    <img 
+        src={book.image_url}
+        alt={book.title}
+        className="h-full object-center"
+    />
+</figure>
+
+                {/* Content */}
+                <div className="card-body space-y-4">
+
+                    {/* Title */}
+                    <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+                        {book.title}
+                    </h2>
+
+                    <p className='text-lg text-gray-500 font-medium'>
+                        By {book.author}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                        <span className="badge badge-soft badge-info badge-outline px-3 py-2">
+                            {book.category}
+                        </span>
+                        <span className="badge  badge-soft badge-success badge-outline px-3 py-2">
+                            {book.available_quantity} available
+                        </span>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">
+                        {book.description}
+                    </p>
+                    <div className="pt-4 items-center">
+                        <button 
+                            onClick={handleBorrow} 
+                            className='btn bg-blue-500 hover:bg-blue-600 text-white font-semibold tracking-wide rounded-lg shadow-md hover:shadow-lg'>
+                            Borrow This Book
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

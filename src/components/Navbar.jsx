@@ -7,8 +7,6 @@ import { authClient } from '@/lib/auth-client';
 const Navbar = () => {
   const userData=authClient.useSession();
   const user=userData.data?.user;
-  console.log("User in Navbar:", user);
- 
 
   const handleSignOut = async () => {
     await authClient.signOut();
