@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌙 MoonLit Library
 
-## Getting Started
+A modern digital library platform where users can explore, discover, and borrow books seamlessly.
 
-First, run the development server:
+## 🚀 Live Demo
+🔗 https://moon-lit-library.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📖 Overview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+MoonLit Library is designed to provide a smooth and interactive reading experience. Users can browse books, view detailed information, and borrow them—all within a clean and responsive interface.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+- 📚 **Homepage Highlights**
+  - View top-rated books
+  - Discover newly arrived books
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🔍 **Browse All Books**
+  - Access a complete collection of available books
+  - Clean and organized UI for easy navigation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🔐 **Authentication System**
+  - Manual login & registration
+  - Google authentication
+  - Secure access to protected features
 
-## Deploy on Vercel
+- 📘 **Book Borrowing**
+  - Only authenticated users can:
+    - View detailed book information
+    - Borrow books
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 🚪 **User Control**
+  - লগ in / register anytime
+  - Logout functionality available
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🛠️ Tech Stack & Packages
+
+- ⚛️ **Next.js / React**
+- 🎨 **Tailwind CSS + DaisyUI**
+- 🔔 **React Toastify** – for notifications
+- 🎞️ **React Fast Marquee** – for smooth scrolling UI
+
+---
+
+## 📌 Future Improvements
+
+- ⭐ Add ratings and reviews
+- 📅 Borrow history tracking
+- ❤️ Wishlist / favorites system
+- 📊 Admin dashboard for managing books
+
+---
