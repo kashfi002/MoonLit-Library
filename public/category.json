@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "category": "Story",
+    "description": "Engaging narratives ranging from classic literature to modern dystopian fiction."
+  },
+  {
+    "id": 2,
+    "category": "Tech",
+    "description": "Essential guides and handbooks for software craftsmanship, algorithms, and programming languages."
+   
+  },
+  {
+    "id": 3,
+    "category": "Science",
+    "description": "Explorations of cosmology, evolutionary biology, and the history of humankind."
+  }
+]
