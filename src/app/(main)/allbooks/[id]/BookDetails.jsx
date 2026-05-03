@@ -8,20 +8,21 @@ const BookDetails = ({ book }) => {
 
     return (
         <div className='min-h-screen flex items-center justify-center bg-base-200 px-4 m-5 py-10'>
-            <div className="card max-w-3xl w-full bg-base-100 shadow-xl rounded-2xl overflow-hidden">
-
+            <div className="card grid grid-cols-1 md:grid-cols-2 max-w-3xl w-full bg-base-100 shadow-xl rounded-2xl">
+                <div className='p-10'>
               <figure className="h-[300px] overflow-hidden">
     <img 
         src={book.image_url}
         alt={book.title}
-        className="h-full object-center"
+        className="h-full object-center rounded-md"
     />
 </figure>
+</div>
 
-                {/* Content */}
+               
                 <div className="card-body space-y-4">
 
-                    {/* Title */}
+                  
                     <h2 className="text-3xl md:text-4xl font-bold leading-tight">
                         {book.title}
                     </h2>
@@ -37,7 +38,7 @@ const BookDetails = ({ book }) => {
                             {book.available_quantity} available
                         </span>
                     </div>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed font-semibold">
                         {book.description}
                     </p>
                     <div className="pt-4 items-center">
